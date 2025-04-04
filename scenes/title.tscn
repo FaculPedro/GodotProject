@@ -1,0 +1,29 @@
+[gd_scene load_steps=2 format=3 uid="uid://bp0ta3nxcxhqx"]
+
+[ext_resource type="Script" uid="uid://ittidve8iqeu" path="res://scripts/title.gd" id="1_4ignj"]
+
+[node name="Title" type="Node2D"]
+script = ExtResource("1_4ignj")
+
+[node name="Bakground" type="ColorRect" parent="."]
+offset_right = 288.0
+offset_bottom = 208.0
+
+[node name="TitleLabel" type="Label" parent="."]
+offset_top = 44.0
+offset_right = 288.0
+offset_bottom = 103.0
+theme_override_colors/font_color = Color(0.316392, 0.000262409, 0.981631, 1)
+text = "Floco, o Pinguim das Estações"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="StartButton" type="Button" parent="."]
+offset_left = 109.0
+offset_top = 138.0
+offset_right = 176.0
+offset_bottom = 169.0
+text = "Iniciar
+"
+
+[connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
